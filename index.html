@@ -2,26 +2,26 @@
 <html lang="he" dir="rtl">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>תוכנית השקעה – פרויקט 4 וילות עם בריכה | קוסמוי, תאילנד</title>
-  <meta name="description" content="פרויקט 4 וילות פרטיות עם בריכה בקוסמוי, תאילנד. מודל השקעה: רווח ממכירה או קבלת וילה מתחת למחיר שוק. Leasehold ל-30 שנה + אופציה. ללא ריהוט. שכירות חודשית ממוצעת 9–13 אלף ₪.">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>פרויקט 4 וילות עם בריכה בקוסמוי | מודל השקעה: רווח או נכס</title>
+  <meta name="description" content="פרויקט 4 וילות פרטיות עם בריכה בקוסמוי, תאילנד. מודל השקעה: רווח ממכירה או קבלת וילה מתחת למחיר שוק. Leasehold ל-30 שנה + אופציה. שכירות חודשית ממוצעת 9–13 אלף ₪." />
 
-  <!-- Fonts (Hebrew-friendly, premium) -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;700;800;900&family=Rubik:wght@400;600;700;800;900&family=Rubik+Dirt&display=swap" rel="stylesheet">
 
   <style>
     :root{
       --bg:#fbf7f0;
-      --bg2:#f3ede2;
-
-      --card:rgba(255,255,255,.86);
-      --card2:rgba(255,255,255,.76);
-      --stroke:rgba(20,16,10,.12);
+      --bg2:#f4efe5;
 
       --ink:#1f1b14;
-      --muted:#6f6658;
+      --muted:rgba(31,27,20,.70);
+
+      --card:rgba(255,255,255,.82);
+      --card2:rgba(255,255,255,.72);
+      --stroke:rgba(20,16,10,.12);
 
       --sand:#eadcc7;
       --sand2:#d7c09a;
@@ -34,136 +34,193 @@
       --r:26px;
       --r2:18px;
       --container:1120px;
+
+      --font:"Heebo","Rubik",system-ui,-apple-system,Segoe UI,Roboto,Arial,"Noto Sans";
+      --fontHero:"Rubik Dirt","Rubik","Heebo",system-ui,-apple-system,Segoe UI,Roboto,Arial,"Noto Sans";
     }
 
     *{box-sizing:border-box}
-    html,body{height:100%}
+    html,body{height:100%; width:100%}
     body{
       margin:0;
-      font-family:"Heebo",system-ui,-apple-system,Segoe UI,Roboto,Arial,"Noto Sans";
+      font-family:var(--font);
       color:var(--ink);
       background:
-        radial-gradient(900px 520px at 85% -10%, rgba(181,139,87,.16), transparent 60%),
-        radial-gradient(900px 520px at 15% 8%, rgba(46,125,91,.09), transparent 60%),
-        radial-gradient(850px 520px at 50% 110%, rgba(215,192,154,.24), transparent 60%),
-        linear-gradient(180deg, var(--bg), var(--bg2));
-      overflow-x:hidden;
+        radial-gradient(900px 520px at 85% -10%, rgba(181,139,87,.18), transparent 60%),
+        radial-gradient(900px 520px at 15% 8%, rgba(46,125,91,.10), transparent 60%),
+        radial-gradient(850px 520px at 50% 110%, rgba(215,192,154,.26), transparent 60%),
+        linear-gradient(180deg,var(--bg),var(--bg2));
+      overflow-x:hidden; /* no sideways scroll */
     }
 
-    a{color:inherit; text-decoration:none}
-    strong,b{font-weight:900}
-
+    a{color:inherit;text-decoration:none}
+    b,strong{font-weight:900}
+    img{max-width:100%; height:auto; display:block}
     .container{
       max-width:var(--container);
       margin:0 auto;
       padding:0 16px;
     }
 
-    /* ===== Header (premium, stable on mobile) ===== */
+    /* ---------- Header / Responsive Menu ---------- */
     header{
       position:sticky;
       top:0;
-      z-index:50;
-      background:rgba(251,247,240,.88);
-      backdrop-filter: blur(12px);
+      z-index:100;
+      background:rgba(251,247,240,.78);
+      backdrop-filter:blur(12px);
       border-bottom:1px solid rgba(20,16,10,.10);
     }
+
     .nav{
-      height:70px;
+      height:72px;
       display:flex;
       align-items:center;
       justify-content:space-between;
       gap:10px;
     }
+
     .brand{
       display:flex;
       align-items:center;
-      gap:10px;
-      min-width: 150px;
+      gap:12px;
+      min-width:0; /* prevent overflow */
     }
     .logo{
-      width:38px;height:38px;border-radius:16px;
+      width:40px;height:40px;border-radius:16px;
       background:
         radial-gradient(16px 16px at 30% 25%, rgba(255,255,255,.95), transparent 60%),
         linear-gradient(135deg, rgba(181,139,87,.95), rgba(215,192,154,.85));
-      box-shadow: 0 0 0 1px rgba(20,16,10,.10) inset, var(--shadow2);
+      box-shadow:0 0 0 1px rgba(20,16,10,.10) inset, var(--shadow2);
+      flex:0 0 auto;
     }
-    .brand .t1{font-weight:1000; font-size:13px; line-height:1.1}
-    .brand .t2{font-weight:800; font-size:12px; color:var(--muted); margin-top:2px}
-
-    /* compact “pill” menu that wraps nicely on mobile */
-    .menu{
-      display:flex;
-      gap:8px;
-      flex-wrap:wrap;
-      justify-content:center;
-      align-items:center;
-      padding:8px;
-      border-radius:999px;
-      border:1px solid rgba(20,16,10,.10);
-      background: rgba(255,255,255,.62);
-      box-shadow: var(--shadow2);
-      max-width: 620px;
-    }
-    .tab{
-      padding:9px 12px;
-      border-radius:999px;
-      font-size:12px;
-      font-weight:950;
-      color: rgba(31,27,20,.80);
-      border:1px solid transparent;
-      transition: background .15s ease, transform .15s ease, border-color .15s ease;
-      white-space:nowrap;
-      user-select:none;
-    }
-    .tab:hover{background: rgba(234,220,199,.55); transform: translateY(-1px)}
-    .tab.active{
-      background: linear-gradient(135deg, rgba(181,139,87,.18), rgba(215,192,154,.22));
-      border-color: rgba(181,139,87,.28);
-      color: rgba(31,27,20,.94);
-    }
+    .brand-text{min-width:0}
+    .brand .t1{font-weight:1000;font-size:13px;line-height:1.1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .brand .t2{font-weight:800;font-size:12px;color:var(--muted);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 
     .actions{
       display:flex;
-      gap:8px;
       align-items:center;
-      min-width: 150px;
-      justify-content:flex-end;
+      gap:10px;
+      min-width:0; /* prevent overflow */
+      flex:0 0 auto;
     }
+
     .btn{
       display:inline-flex;
       align-items:center;
       justify-content:center;
+      gap:8px;
       padding:10px 14px;
       border-radius:999px;
       border:1px solid rgba(20,16,10,.12);
-      background: rgba(255,255,255,.76);
+      background:rgba(255,255,255,.72);
       font-weight:1000;
       font-size:12.5px;
       cursor:pointer;
-      transition: transform .15s ease, background .15s ease, border-color .15s ease;
+      transition:transform .15s ease, background .15s ease, border-color .15s ease;
+      user-select:none;
       white-space:nowrap;
     }
-    .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.92); border-color: rgba(20,16,10,.18)}
+    .btn:hover{transform:translateY(-1px);background:rgba(255,255,255,.92);border-color:rgba(20,16,10,.18)}
     .btn.primary{
-      border-color: rgba(181,139,87,.30);
-      background: linear-gradient(135deg, rgba(181,139,87,.22), rgba(215,192,154,.34));
+      border-color:rgba(181,139,87,.30);
+      background:linear-gradient(135deg, rgba(181,139,87,.22), rgba(215,192,154,.34));
     }
 
-    main{padding: 18px 0 110px;}
-    section{scroll-margin-top: 92px; padding: 18px 0;}
+    /* Desktop inline menu */
+    .menu{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:center;
+      padding:8px;
+      border:1px solid rgba(20,16,10,.10);
+      background:rgba(255,255,255,.60);
+      border-radius:999px;
+      box-shadow:var(--shadow2);
+      max-width:680px;
+    }
+    .tab{
+      padding:10px 12px;
+      border-radius:999px;
+      font-size:12px;
+      font-weight:950;
+      color:rgba(31,27,20,.78);
+      border:1px solid transparent;
+      transition:background .15s ease, transform .15s ease, border-color .15s ease;
+      white-space:nowrap;
+    }
+    .tab:hover{background:rgba(234,220,199,.55);transform:translateY(-1px)}
+    .tab.active{
+      background:linear-gradient(135deg, rgba(181,139,87,.18), rgba(215,192,154,.22));
+      border-color:rgba(181,139,87,.28);
+      color:rgba(31,27,20,.92);
+    }
 
-    /* ===== Cards / typography ===== */
+    /* Mobile: collapsible menu (not hidden permanently) */
+    .nav-toggle{
+      display:none; /* desktop hidden */
+      width:44px;height:44px;
+      border-radius:14px;
+      border:1px solid rgba(20,16,10,.12);
+      background:rgba(255,255,255,.72);
+      box-shadow:var(--shadow2);
+    }
+    .nav-toggle svg{width:20px;height:20px}
+    .nav-toggle:hover{background:rgba(255,255,255,.92)}
+    .nav-toggle:active{transform:scale(.98)}
+
+    .mobile-drawer{
+      display:none;
+      border-top:1px solid rgba(20,16,10,.10);
+      padding:10px 16px 14px;
+      background:rgba(251,247,240,.86);
+      backdrop-filter:blur(12px);
+    }
+    .mobile-drawer.open{display:block}
+
+    .mobile-menu{
+      display:flex;
+      gap:8px;
+      overflow-x:auto;              /* scroll inside, not page */
+      -webkit-overflow-scrolling:touch;
+      scrollbar-width:none;
+      padding:8px;
+      border:1px solid rgba(20,16,10,.10);
+      background:rgba(255,255,255,.65);
+      border-radius:999px;
+      box-shadow:var(--shadow2);
+    }
+    .mobile-menu::-webkit-scrollbar{display:none}
+    .mobile-menu .tab{padding:9px 12px; font-size:12px}
+    .mobile-actions{
+      display:flex;
+      gap:10px;
+      margin-top:10px;
+    }
+    .mobile-actions .btn{flex:1}
+
+    @media (max-width: 980px){
+      .menu{display:none}          /* replaced by toggle+drawer */
+      .nav-toggle{display:inline-flex;align-items:center;justify-content:center}
+      .actions .btn{display:none}  /* keep header clean on mobile; actions appear in drawer */
+      .brand .t2{display:none}     /* tighter top bar */
+      .nav{gap:8px}
+    }
+
+    /* ---------- Main ---------- */
+    main{padding:18px 0 100px}
+    section{padding:18px 0; scroll-margin-top:92px}
     .card{
       border:1px solid rgba(20,16,10,.10);
-      background: var(--card);
-      border-radius: var(--r);
-      padding: 22px 18px;
-      box-shadow: var(--shadow2);
-      backdrop-filter: blur(10px);
+      background:var(--card);
+      border-radius:var(--r);
+      padding:20px 16px;
+      box-shadow:var(--shadow2);
+      backdrop-filter:blur(10px);
     }
-    .card + .card{margin-top: 14px;}
-
     .tag{
       display:inline-flex;
       align-items:center;
@@ -171,224 +228,214 @@
       font-size:12px;
       font-weight:1000;
       padding:8px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(20,16,10,.10);
-      background: rgba(234,220,199,.58);
-      margin-bottom: 12px;
-      color: rgba(31,27,20,.92);
+      border-radius:999px;
+      border:1px solid rgba(20,16,10,.10);
+      background:rgba(234,220,199,.58);
+      margin-bottom:12px;
+      color:rgba(31,27,20,.92);
     }
     .tag .ico{
       width:9px;height:9px;border-radius:999px;
-      background: linear-gradient(135deg, var(--leaf), var(--accent));
-      box-shadow: 0 0 0 4px rgba(46,125,91,.10);
+      background:linear-gradient(135deg,var(--leaf),var(--accent));
+      box-shadow:0 0 0 4px rgba(46,125,91,.10);
     }
-
+    h1,h2,h3{margin:0}
     h2{
-      margin:0 0 10px;
-      font-size: 26px;
-      line-height: 1.18;
-      font-weight: 1100;
-      letter-spacing: -.2px;
+      font-size:26px;
+      line-height:1.12;
+      letter-spacing:-.2px;
+      font-weight:1100;
+      margin-bottom:10px;
       text-align:center;
     }
     h3{
-      margin:0 0 8px;
-      font-size: 18px;
-      line-height: 1.2;
-      font-weight: 1100;
+      font-size:18px;
+      line-height:1.2;
+      font-weight:1100;
+      margin-bottom:8px;
       text-align:center;
     }
-    p, li{
+    p,li{
+      color:var(--muted);
+      font-weight:800;
+      font-size:15px;
+      line-height:1.9;
       margin:0;
-      color: var(--muted);
-      font-weight: 800;
-      font-size: 15px;
-      line-height: 1.9;
     }
-    ul{margin:0; padding: 0 18px 0 0;}
-    .center{ text-align:center; }
-    .mt10{margin-top:10px}
-    .mt14{margin-top:14px}
+    ul{margin:0; padding:0 18px 0 0}
 
-    /* ===== HERO (Mobile-first, centered) ===== */
+    /* ---------- HERO (Mobile-first centered) ---------- */
     .hero{
       border:1px solid rgba(20,16,10,.10);
-      background: var(--card2);
-      border-radius: calc(var(--r) + 10px);
-      box-shadow: var(--shadow);
+      background:var(--card2);
+      border-radius:calc(var(--r) + 10px);
+      box-shadow:var(--shadow);
       overflow:hidden;
-      backdrop-filter: blur(10px);
+      backdrop-filter:blur(10px);
     }
     .hero-inner{
-      padding: 20px 16px;
+      padding:20px 16px;
       display:grid;
-      gap: 14px;
+      gap:14px;
       text-align:center;
       justify-items:center;
     }
-
     .eyebrow{
       display:inline-flex;
       align-items:center;
       gap:10px;
-      padding: 9px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(20,16,10,.10);
-      background: rgba(255,255,255,.78);
-      color: rgba(31,27,20,.82);
-      font-weight: 1000;
-      font-size: 12px;
+      padding:9px 12px;
+      border-radius:999px;
+      border:1px solid rgba(20,16,10,.10);
+      background:rgba(255,255,255,.78);
+      color:rgba(31,27,20,.82);
+      font-weight:1000;
+      font-size:12px;
     }
     .dot{
       width:10px;height:10px;border-radius:999px;
-      background: linear-gradient(135deg, var(--leaf), var(--accent));
-      box-shadow: 0 0 0 4px rgba(46,125,91,.10);
+      background:linear-gradient(135deg,var(--leaf),var(--accent));
+      box-shadow:0 0 0 4px rgba(46,125,91,.10);
     }
-
     .hero-title{
-      font-weight: 1100;
-      font-size: 34px;
-      line-height: 1.10;
-      letter-spacing: -.2px;
-      color: rgba(31,27,20,.96);
-      max-width: 22ch;
+      font-family:var(--fontHero);
+      font-weight:1000;
+      font-size:34px;
+      line-height:1.06;
+      letter-spacing:.2px;
+      margin-top:6px;
+      color:rgba(31,27,20,.96);
+      text-align:center;
     }
-    .hero-sub{
-      font-size: 15.5px;
-      max-width: 62ch;
-    }
+    .hero-sub{font-size:15.5px; max-width:62ch; text-align:center}
 
     .hero-media{
       width:100%;
-      max-width: 520px;
-      border-radius: 22px;
+      max-width:560px;
+      border-radius:22px;
       overflow:hidden;
-      border: 1px solid rgba(20,16,10,.10);
-      box-shadow: var(--shadow2);
+      border:1px solid rgba(20,16,10,.10);
+      box-shadow:var(--shadow2);
       position:relative;
-      margin-top: 6px;
+      margin-top:4px;
     }
     .hero-media img{
       width:100%;
-      height: 170px;
-      object-fit: cover;
-      display:block;
-      filter: saturate(1.05) contrast(1.03);
-      transform: scale(1.02);
+      height:190px;
+      object-fit:cover;
+      filter:saturate(1.05) contrast(1.03);
+      transform:scale(1.02);
     }
     .hero-media:after{
       content:"";
       position:absolute;
       inset:0;
       background:
-        radial-gradient(520px 240px at 50% 0%, rgba(255,255,255,.35), transparent 60%),
-        linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.58));
+        radial-gradient(560px 260px at 50% 0%, rgba(255,255,255,.35), transparent 60%),
+        linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.62));
       pointer-events:none;
     }
 
     .metrics{
       width:100%;
-      max-width: 560px;
+      max-width:560px;
       display:grid;
-      grid-template-columns: 1fr;
-      gap: 10px;
-      margin-top: 6px;
+      grid-template-columns:1fr;
+      gap:10px;
+      margin-top:6px;
     }
     .metric{
-      border: 1px solid rgba(20,16,10,.10);
-      background: rgba(255,255,255,.86);
-      border-radius: 18px;
-      padding: 14px 14px 12px;
-      box-shadow: var(--shadow2);
+      border:1px solid rgba(20,16,10,.10);
+      background:rgba(255,255,255,.82);
+      border-radius:18px;
+      padding:14px 14px 12px;
+      box-shadow:var(--shadow2);
       text-align:center;
     }
-    .metric .k{font-size: 12px; color: rgba(31,27,20,.62); font-weight:1000}
-    .metric .v{font-size: 22px; font-weight:1200; margin-top: 6px; color: rgba(31,27,20,.94)}
-    .metric .t{font-size: 12px; color: rgba(31,27,20,.58); margin-top: 6px; font-weight:900}
+    .metric .k{font-size:12px;color:rgba(31,27,20,.62);font-weight:1000}
+    .metric .v{font-size:22px;font-weight:1200;margin-top:6px;color:rgba(31,27,20,.94)}
+    .metric .t{font-size:12px;color:rgba(31,27,20,.58);margin-top:6px;font-weight:900}
 
     .cta-row{
       display:flex;
       gap:10px;
       width:100%;
-      max-width: 560px;
-      margin-top: 6px;
+      max-width:560px;
+      margin-top:6px;
     }
     .cta-row .btn{flex:1}
+    .btn.secondary{background:rgba(255,255,255,.78)}
 
-    /* Two-column grid on desktop */
-    .grid{
-      display:grid;
-      grid-template-columns: 1fr;
-      gap: 14px;
-    }
+    /* Desktop layout */
     @media (min-width: 980px){
-      h2,h3{ text-align:right; }
+      h2,h3,.hero-title,.hero-sub{ text-align:right }
       .hero-inner{
-        grid-template-columns: 1.2fr .8fr;
+        grid-template-columns:1.2fr .8fr;
         align-items:stretch;
-        gap: 18px;
+        gap:18px;
         text-align:right;
         justify-items:stretch;
-        padding: 34px 28px;
+        padding:34px 28px;
       }
-      .hero-title{font-size: 48px; max-width:none;}
+      .hero-title{font-size:48px}
       .hero-media{max-width:none; margin-top:0; height:100%}
       .hero-media img{height:100%}
-      .metrics{grid-template-columns: repeat(3, 1fr); max-width:none;}
-      .cta-row{max-width:none;}
-      .grid{grid-template-columns: 1fr 1fr}
-      .span2{grid-column: 1 / -1}
+      .metrics{grid-template-columns:repeat(3,1fr); max-width:none}
+      .cta-row{max-width:none}
     }
 
-    /* Inputs */
-    .form-wrap{
-      margin-top: 12px;
-      display:grid;
-      gap: 10px;
-      max-width: 560px;
-      margin-inline:auto;
+    /* Section grid */
+    .grid{display:grid; grid-template-columns:1fr; gap:14px}
+    @media (min-width: 980px){
+      .grid{grid-template-columns:1fr 1fr}
     }
+
+    /* Forms */
     .input{
       width:100%;
       padding:15px 14px;
       border-radius:16px;
       border:1px solid rgba(20,16,10,.12);
-      background: rgba(255,255,255,.92);
-      color: rgba(31,27,20,.92);
+      background:rgba(255,255,255,.90);
+      color:rgba(31,27,20,.92);
       outline:none;
-      font-size: 14.5px;
-      font-weight: 900;
-      transition: border-color .15s ease, transform .15s ease, box-shadow .15s ease;
+      font-size:14.5px;
+      font-weight:900;
+      transition:border-color .15s ease, transform .15s ease, box-shadow .15s ease;
+      font-family:var(--font);
+      resize:vertical;
     }
     .input:focus{
-      border-color: rgba(181,139,87,.45);
-      transform: translateY(-1px);
-      box-shadow: 0 12px 26px rgba(181,139,87,.14);
+      border-color:rgba(181,139,87,.45);
+      transform:translateY(-1px);
+      box-shadow:0 12px 26px rgba(181,139,87,.14);
     }
     .submit{
       padding:14px 18px;
       border-radius:999px;
       border:none;
       font-weight:1200;
-      background: linear-gradient(135deg, rgba(181,139,87,.92), rgba(215,192,154,.92));
-      color: rgba(31,27,20,.96);
+      background:linear-gradient(135deg, rgba(181,139,87,.92), rgba(215,192,154,.92));
+      color:rgba(31,27,20,.96);
       cursor:pointer;
-      transition: transform .15s ease, filter .15s ease;
+      transition:transform .15s ease, filter .15s ease;
       width:100%;
-      box-shadow: var(--shadow2);
-      font-size: 14px;
+      box-shadow:var(--shadow2);
+      font-family:var(--font);
+      font-size:14px;
     }
-    .submit:hover{transform: translateY(-1px); filter: brightness(1.03)}
-    .fineprint{
-      margin-top:10px;
-      font-size:13px;
-      color: rgba(31,27,20,.70);
-      font-weight: 900;
-      line-height:1.8;
+    .submit:hover{transform:translateY(-1px);filter:brightness(1.03)}
+    .note{
+      margin-top:12px;
+      color:rgba(31,27,20,.70);
+      font-size:13.5px;
+      line-height:1.9;
+      font-weight:900;
       text-align:center;
     }
+    @media (min-width:980px){ .note{text-align:right} }
 
-    /* WhatsApp floating button */
+    /* WhatsApp floating */
     .wa-float{
       position:fixed;
       bottom:18px;
@@ -402,352 +449,428 @@
       align-items:center;
       justify-content:center;
       box-shadow:0 12px 32px rgba(0,0,0,.18);
-      transition: transform .15s ease, filter .15s ease;
+      transition:transform .15s ease, filter .15s ease;
     }
-    .wa-float:hover{transform: translateY(-1px); filter: brightness(1.02)}
+    .wa-float:hover{transform:translateY(-1px); filter:brightness(1.02)}
 
-    /* Make header simpler on very small screens (prevents "weird" look) */
-    @media (max-width: 420px){
-      .brand .t2{display:none;}
-      .menu{padding:6px; gap:6px;}
-      .tab{padding:8px 10px; font-size:11.5px;}
-      .actions .btn{padding:9px 10px; font-size:12px;}
-    }
-    @media (max-width: 360px){
-      .actions{display:none;} /* keeps header clean */
-      .menu{max-width: none;}
+    /* Print to PDF */
+    @media print{
+      header,.wa-float,.mobile-drawer{display:none!important}
+      body{background:white}
+      .card,.hero{box-shadow:none}
+      main{padding:0}
+      section{padding:10px 0}
     }
   </style>
 </head>
 
 <body>
-<header>
-  <div class="container">
-    <div class="nav">
-      <div class="brand">
-        <div class="logo" aria-hidden="true"></div>
-        <div>
-          <div class="t1">פרויקט 4 וילות עם בריכה</div>
-          <div class="t2">קוסמוי, תאילנד · מודל השקעה שקוף</div>
+  <header>
+    <div class="container">
+      <div class="nav">
+        <div class="brand">
+          <div class="logo" aria-hidden="true"></div>
+          <div class="brand-text">
+            <div class="t1">פרויקט 4 וילות עם בריכה</div>
+            <div class="t2">קוסמוי, תאילנד · השקעה יוקרתית ושקופה</div>
+          </div>
+        </div>
+
+        <!-- Desktop menu -->
+        <nav class="menu" aria-label="ניווט עליון">
+          <a class="tab" href="#hero">שער</a>
+          <a class="tab" href="#summary">תקציר</a>
+          <a class="tab" href="#details">הפרויקט</a>
+          <a class="tab" href="#exit">מסלולים</a>
+          <a class="tab" href="#facts">עובדות</a>
+          <a class="tab" href="#contact">יצירת קשר</a>
+        </nav>
+
+        <div class="actions">
+          <button class="btn" type="button" id="pdfBtn">PDF</button>
+          <button class="btn primary" type="button" data-scroll="#contact">השאירו פרטים</button>
+
+          <!-- Mobile toggle -->
+          <button class="nav-toggle" type="button" id="navToggle" aria-label="פתח/סגור תפריט" aria-expanded="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="rgba(31,27,20,.85)" stroke-width="2" stroke-linecap="round">
+              <path d="M4 7h16M4 12h16M4 17h16"></path>
+            </svg>
+          </button>
         </div>
       </div>
+    </div>
 
-      <nav class="menu" aria-label="ניווט">
+    <!-- Mobile drawer (collapsible) -->
+    <div class="mobile-drawer" id="mobileDrawer">
+      <div class="mobile-menu" aria-label="תפריט מובייל">
         <a class="tab" href="#hero">שער</a>
         <a class="tab" href="#summary">תקציר</a>
-        <a class="tab" href="#details">נתונים</a>
-        <a class="tab" href="#structure">מבנה</a>
+        <a class="tab" href="#details">הפרויקט</a>
         <a class="tab" href="#exit">מסלולים</a>
-        <a class="tab" href="#kohsamui">קוסמוי</a>
-        <a class="tab" href="#benefits">יתרונות</a>
-        <a class="tab" href="#execution">ביצוע</a>
-        <a class="tab" href="#contact">לידים</a>
-      </nav>
-
-      <div class="actions">
-        <button class="btn" type="button" id="pdfBtn">PDF</button>
-        <button class="btn primary" type="button" onclick="document.querySelector('#contact')?.scrollIntoView({behavior:'smooth'})">השאירו פרטים</button>
+        <a class="tab" href="#facts">עובדות</a>
+        <a class="tab" href="#contact">יצירת קשר</a>
+      </div>
+      <div class="mobile-actions">
+        <button class="btn" type="button" id="pdfBtn2">PDF</button>
+        <button class="btn primary" type="button" data-scroll="#contact">קבלת פרטים</button>
       </div>
     </div>
-  </div>
-</header>
+  </header>
 
-<main>
-  <!-- HERO -->
-  <section id="hero">
-    <div class="container">
-      <div class="hero">
-        <div class="hero-inner">
-          <div>
-            <div class="eyebrow"><span class="dot"></span> חלום טרופי · השקעה יוקרתית</div>
-            <div class="hero-title">4 וילות פרטיות עם בריכה בקוסמוי</div>
+  <main>
+    <!-- HERO -->
+    <section id="hero">
+      <div class="container">
+        <div class="hero">
+          <div class="hero-inner">
+            <div>
+              <div class="eyebrow"><span class="dot"></span> חלום טרופי · השקעה יוקרתית</div>
+              <div class="hero-title">4 וילות פרטיות עם בריכה בקוסמוי</div>
 
-            <p class="hero-sub mt10">
-              הפרויקט כולל בניית <strong>4 וילות פרטיות עם בריכה</strong>, באי קוסמוי – אחד מיעדי הנדל"ן החזקים בדרום־מזרח אסיה.
-              המודל מאפשר למשקיע: <strong>להרוויח ממכירת הווילה</strong> או <strong>לקבל וילה לעצמו במחיר נמוך משמעותית ממחיר שוק</strong>.
-              ההשקעה בנויה כך שהסיכון ממוזער והרווחיות ברורה מראש.
-            </p>
+              <p class="hero-sub">
+                מודל השקעה חכם: <strong>רווח ממכירה</strong> או <strong>קבלת וילה לעצמך</strong> במחיר נמוך משמעותית ממחיר שוק.
+                שילוב של חופש, נכס ופוטנציאל באחד האיים המבוקשים בתאילנד.
+              </p>
 
-            <div class="metrics mt14" role="list">
-              <div class="metric" role="listitem">
-                <div class="k">כמות יחידות</div>
-                <div class="v">4 וילות</div>
-                <div class="t">וילות יוקרה עם בריכה</div>
+              <div class="metrics" role="list">
+                <div class="metric" role="listitem">
+                  <div class="k">כמות יחידות</div>
+                  <div class="v">4 וילות</div>
+                  <div class="t">וילות יוקרה עם בריכה</div>
+                </div>
+                <div class="metric" role="listitem">
+                  <div class="k">מסגרת הזכויות</div>
+                  <div class="v">30 שנה +</div>
+                  <div class="t">Leasehold + אופציה</div>
+                </div>
+                <div class="metric" role="listitem">
+                  <div class="k">שכירות חודשית ממוצעת</div>
+                  <div class="v">₪9K–₪13K</div>
+                  <div class="t">תלוי עונה וניהול</div>
+                </div>
               </div>
-              <div class="metric" role="listitem">
-                <div class="k">מסגרת הזכויות</div>
-                <div class="v">30 שנה +</div>
-                <div class="t">Leasehold + אופציה</div>
-              </div>
-              <div class="metric" role="listitem">
-                <div class="k">שכירות חודשית ממוצעת</div>
-                <div class="v">₪9K–₪13K</div>
-                <div class="t">בהתאם לעונה וניהול</div>
+
+              <div class="cta-row">
+                <button class="btn primary" type="button" data-scroll="#contact">קבלת פרטים מלאים</button>
+                <a class="btn secondary" href="https://wa.me/972502701001" target="_blank" rel="noopener">WhatsApp</a>
               </div>
             </div>
 
-            <div class="cta-row mt14">
-              <button class="btn primary" type="button" onclick="document.querySelector('#contact')?.scrollIntoView({behavior:'smooth'})">קבלת פרטים מלאים</button>
-              <a class="btn" href="https://wa.me/972502701001" target="_blank" rel="noopener">WhatsApp</a>
+            <!-- image -->
+            <div class="hero-media" aria-hidden="true">
+              <img src="beach-1836335_1280.jpg" alt="">
             </div>
           </div>
+        </div>
+      </div>
+    </section>
 
-          <div class="hero-media" aria-hidden="true">
-            <img src="beach-1836335_1280.jpg" alt="">
+    <!-- EXECUTIVE SUMMARY -->
+    <section id="summary">
+      <div class="container">
+        <div class="card">
+          <div class="tag"><span class="ico"></span> תקציר מנהלים (Executive Summary)</div>
+          <h2>הזדמנות נדל״ן שמחברת חלום ומודל השקעה הוגן</h2>
+          <ul>
+            <li>הפרויקט כולל בניית <b>4 וילות פרטיות עם בריכה</b>, באי קוסמוי – אחד מיעדי הנדל"ן החזקים בדרום־מזרח אסיה.</li>
+            <li>המודל מאפשר למשקיע: <b>להרוויח ממכירת הווילה</b> או <b>לקבל וילה לעצמו במחיר נמוך משמעותית ממחיר שוק</b>.</li>
+            <li>ההשקעה בנויה כך שהסיכון ממוזער והרווחיות ברורה מראש.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECT DATA -->
+    <section id="details">
+      <div class="container">
+        <div class="grid">
+          <div class="card">
+            <div class="tag"><span class="ico"></span> נתוני הפרויקט</div>
+            <h2>פרטי הפרויקט</h2>
+            <ul>
+              <li><b>מיקום:</b> קוסמוי, תאילנד</li>
+              <li><b>סוג נכס:</b> וילות יוקרה עם בריכה פרטית</li>
+              <li><b>כמות יחידות:</b> 4</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="tag"><span class="ico"></span> קהל יעד</div>
+            <h2>למי זה מתאים</h2>
+            <ul>
+              <li>משקיעים זרים</li>
+              <li>רוכשי וילות לנופש / מגורים</li>
+              <li>משקיעים להשכרה יוקרתית</li>
+            </ul>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SUMMARY -->
-  <section id="summary">
-    <div class="container">
-      <div class="card">
-        <div class="tag"><span class="ico"></span> תקציר מנהלים (Executive Summary)</div>
-        <h2>הזדמנות נדל״ן שמחברת חלום ומודל השקעה הוגן</h2>
-        <ul>
-          <li>הפרויקט כולל בניית <strong>4 וילות פרטיות עם בריכה</strong>, באי קוסמוי – אחד מיעדי הנדל"ן החזקים בדרום־מזרח אסיה.</li>
-          <li>המודל מאפשר למשקיע: <strong>להרוויח ממכירת הווילה</strong> או <strong>לקבל וילה לעצמו במחיר נמוך משמעותית ממחיר שוק</strong>.</li>
-          <li>ההשקעה בנויה כך שהסיכון ממוזער והרווחיות ברורה מראש.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECT DATA -->
-  <section id="details">
-    <div class="container">
-      <div class="grid">
+    <!-- INVESTMENT STRUCTURE -->
+    <section id="structure">
+      <div class="container">
         <div class="card">
-          <div class="tag"><span class="ico"></span> נתוני הפרויקט</div>
-          <h2>פרטי הפרויקט</h2>
+          <div class="tag"><span class="ico"></span> מבנה ההשקעה</div>
+          <h2>מספרים ברורים מראש</h2>
           <ul>
-            <li><strong>מיקום:</strong> קוסמוי, תאילנד</li>
-            <li><strong>סוג נכס:</strong> וילות יוקרה עם בריכה פרטית</li>
-            <li><strong>כמות יחידות:</strong> 4</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <div class="tag"><span class="ico"></span> קהל יעד</div>
-          <h2>למי זה מתאים</h2>
-          <ul>
-            <li>משקיעים זרים</li>
-            <li>רוכשי וילות לנופש / מגורים</li>
-            <li>משקיעים להשכרה יוקרתית</li>
+            <li><b>כל השקעה של 550,000 ₪</b> = זכות כלכלית מלאה בווילה אחת</li>
+            <li><b>מחיר מכירה צפוי לווילה:</b> מינימום 1,000,000 ₪</li>
+            <li><b>משך פרויקט משוער:</b> תכנון → בנייה → מכירה</li>
           </ul>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- INVESTMENT STRUCTURE -->
-  <section id="structure">
-    <div class="container">
-      <div class="card">
-        <div class="tag"><span class="ico"></span> מבנה ההשקעה</div>
-        <h2>מספרים ברורים מראש</h2>
-        <ul>
-          <li><strong>כל השקעה של 550,000 ₪</strong> = זכות כלכלית מלאה בווילה אחת</li>
-          <li><strong>מחיר מכירה צפוי לווילה:</strong> מינימום 1,000,000 ₪</li>
-          <li><strong>משך פרויקט משוער:</strong> תכנון → בנייה → מכירה</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- EXIT ROUTES -->
-  <section id="exit">
-    <div class="container">
-      <div class="card">
-        <div class="tag"><span class="ico"></span> מסלולי יציאה למשקיע</div>
-        <h2>המשקיע לא “מהמר” – הוא בוחר</h2>
-        <p class="center">שני מסלולים – בחירה אחת נכונה עבורך.</p>
-      </div>
-
-      <div class="grid mt14">
+    <!-- EXIT ROUTES -->
+    <section id="exit">
+      <div class="container">
         <div class="card">
-          <h2 style="margin-bottom:8px">🟢 מסלול A – רווח ממכירה</h2>
-          <ul>
-            <li>המשקיע משקיע: <strong>550,000 ₪</strong></li>
-            <li>הווילה נמכרת ב־<strong>1,000,000 ₪</strong> (לפחות)</li>
-            <li>קודם כל: המשקיע מקבל חזרה <strong>100% מהקרן</strong> – 550,000 ₪</li>
-            <li>מהרווח שנותר: חלוקה <strong>50% למשקיע</strong> | <strong>50% ליזם</strong></li>
-          </ul>
-
-          <div class="tag mt14"><span class="ico"></span> דוגמה</div>
-          <ul>
-            <li>מכירה ב־<strong>1,100,000 ₪</strong></li>
-            <li>רווח לאחר החזר קרן: <strong>550,000 ₪</strong></li>
-            <li>חלק המשקיע: <strong>275,000 ₪</strong></li>
-            <li><strong>סה"כ למשקיע: 825,000 ₪</strong></li>
-          </ul>
+          <div class="tag"><span class="ico"></span> מסלולי יציאה למשקיע</div>
+          <h2>המשקיע בוחר: רווח או נכס</h2>
         </div>
 
-        <div class="card">
-          <h2 style="margin-bottom:8px">🟢 מסלול B – קבלת וילה לעצמך</h2>
-          <ul>
-            <li>המשקיע בוחר לא למכור</li>
-            <li>תוספת תשלום: <strong>300,000 ₪</strong></li>
-            <li>סה"כ השקעה: <strong>850,000 ₪</strong></li>
-            <li>שווי נכס בשוק: <strong>~1,000,000–1,100,000 ₪</strong></li>
-          </ul>
+        <div class="grid" style="margin-top:14px;">
+          <div class="card">
+            <h2 style="margin-bottom:10px">🟢 מסלול A – רווח ממכירה</h2>
+            <ul>
+              <li>המשקיע משקיע: <b>550,000 ₪</b></li>
+              <li>הווילה נמכרת ב־<b>1,000,000 ₪</b> (לפחות)</li>
+              <li>קודם כל: המשקיע מקבל חזרה <b>100% מהקרן</b> – 550,000 ₪</li>
+              <li>מהרווח שנותר: חלוקה <b>50% למשקיע</b> | <b>50% ליזם</b></li>
+            </ul>
 
-          <div class="tag mt14"><span class="ico"></span> המשמעות</div>
+            <div style="height:10px"></div>
+            <div class="tag"><span class="ico"></span> דוגמה</div>
+            <ul>
+              <li>מכירה ב־<b>1,100,000 ₪</b></li>
+              <li>רווח לאחר החזר קרן: <b>550,000 ₪</b></li>
+              <li>חלק המשקיע: <b>275,000 ₪</b></li>
+              <li><b>סה"כ למשקיע: 825,000 ₪</b></li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h2 style="margin-bottom:10px">🟢 מסלול B – קבלת וילה לעצמך</h2>
+            <ul>
+              <li>המשקיע בוחר לא למכור</li>
+              <li>תוספת תשלום: <b>300,000 ₪</b></li>
+              <li>סה"כ השקעה: <b>850,000 ₪</b></li>
+              <li>שווי נכס בשוק: <b>~1,000,000–1,100,000 ₪</b></li>
+            </ul>
+
+            <div style="height:10px"></div>
+            <div class="tag"><span class="ico"></span> המשמעות</div>
+            <ul>
+              <li>רכישת וילה <b>מתחת למחיר שוק</b></li>
+              <li>פוטנציאל השכרה / עליית ערך עתידית</li>
+              <li>נכס פיזי באחד האזורים המבוקשים בתאילנד</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FACTS (after excitement) -->
+    <section id="facts">
+      <div class="container">
+        <div class="card">
+          <div class="tag"><span class="ico"></span> עובדות חשובות – בשקיפות מלאה</div>
+          <h2>הפרטים שחשוב לדעת (בלי להסתיר)</h2>
           <ul>
-            <li>רכישת וילה <strong>מתחת למחיר שוק</strong></li>
-            <li>פוטנציאל השכרה / עליית ערך עתידית</li>
-            <li>נכס פיזי באחד האזורים המבוקשים בתאילנד</li>
+            <li>הבית בעסקת <b>Leasehold ל־30 שנה</b> + <b>אופציה</b>.</li>
+            <li>הבתים מגיעים <b>ללא ריהוט</b> – חופש מלא לעיצוב/השבחה.</li>
+            <li><b>שכירות חודשית ממוצעת:</b> בין <b>09–13 אלף ₪</b> לחודש (תלוי עונתיות וניהול).</li>
+          </ul>
+          <p style="margin-top:10px;font-size:13px;font-weight:900;color:var(--muted);text-align:center;">
+            * הנתונים כלליים ומבוססי שוק; אינם התחייבות לתשואה.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY KOH SAMUI -->
+    <section id="kohsamui">
+      <div class="container">
+        <div class="card">
+          <div class="tag"><span class="ico"></span> למה קוסמוי?</div>
+          <h2>שוק שמחובר לתיירות, ביקוש והיצע מוגבל</h2>
+          <ul>
+            <li>מיליוני תיירים בשנה</li>
+            <li>ביקוש קבוע לווילות יוקרה</li>
+            <li>הגירה חיובית של נוודים דיגיטליים ומשקיעים</li>
+            <li>היצע קרקע מוגבל → עליית מחירים</li>
+            <li>שוק חזק להשכרות קצרות וארוכות טווח</li>
           </ul>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FACTS (after excitement) -->
-  <section id="facts">
-    <div class="container">
-      <div class="card">
-        <div class="tag"><span class="ico"></span> עובדות חשובות – בשקיפות מלאה</div>
-        <h2>הפרטים שחשוב לדעת</h2>
-        <ul>
-          <li>הבית בעסקת <strong>Leasehold ל־30 שנה</strong> + <strong>אופציה</strong>.</li>
-          <li>הבתים מגיעים <strong>ללא ריהוט</strong> – חופש מלא לעיצוב/השבחה.</li>
-          <li><strong>שכירות חודשית ממוצעת:</strong> בין <strong>09–13 אלף ₪</strong> לחודש (תלוי עונתיות וניהול).</li>
-        </ul>
-        <div class="fineprint">* הנתונים כלליים ומבוססי שוק; אינם התחייבות לתשואה.</div>
+    <!-- BENEFITS -->
+    <section id="benefits">
+      <div class="container">
+        <div class="card">
+          <div class="tag"><span class="ico"></span> יתרונות למשקיע</div>
+          <h2>למה זה מרגיש בטוח וברור</h2>
+          <ul>
+            <li>✔ סכום כניסה ברור וידוע מראש</li>
+            <li>✔ מודל פשוט – בלי אותיות קטנות</li>
+            <li>✔ קדימות מלאה להחזר הקרן</li>
+            <li>✔ אופציה לנכס פיזי במקום רווח בלבד</li>
+            <li>✔ חלוקת רווח הוגנת</li>
+            <li>✔ שקיפות מלאה לאורך הדרך</li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- WHY KOH SAMUI -->
-  <section id="kohsamui">
-    <div class="container">
-      <div class="card">
-        <div class="tag"><span class="ico"></span> למה קוסמוי?</div>
-        <h2>ביקוש, תיירות והיצע מוגבל</h2>
-        <ul>
-          <li>מיליוני תיירים בשנה</li>
-          <li>ביקוש קבוע לווילות יוקרה</li>
-          <li>הגירה חיובית של נוודים דיגיטליים ומשקיעים</li>
-          <li>היצע קרקע מוגבל → עליית מחירים</li>
-          <li>שוק חזק להשכרות קצרות וארוכות טווח</li>
-        </ul>
+    <!-- EXECUTION -->
+    <section id="execution">
+      <div class="container">
+        <div class="card">
+          <div class="tag"><span class="ico"></span> ניהול וביצוע</div>
+          <h2>איך זה מתבצע בפועל</h2>
+          <ul>
+            <li>החברה רשומה ופועלת בתאילנד</li>
+            <li>עבודה עם קבלנים מקומיים מנוסים</li>
+            <li>ליווי משפטי וניהולי</li>
+            <li>עדכונים שוטפים למשקיעים</li>
+            <li>אסטרטגיית יציאה מוגדרת מראש</li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- BENEFITS -->
-  <section id="benefits">
-    <div class="container">
-      <div class="card">
-        <div class="tag"><span class="ico"></span> יתרונות למשקיע</div>
-        <h2>למה זה עובד</h2>
-        <ul>
-          <li>✔ סכום כניסה ברור וידוע מראש</li>
-          <li>✔ מודל פשוט – בלי אותיות קטנות</li>
-          <li>✔ קדימות מלאה להחזר הקרן</li>
-          <li>✔ אופציה לנכס פיזי במקום רווח בלבד</li>
-          <li>✔ חלוקת רווח הוגנת</li>
-          <li>✔ שקיפות מלאה לאורך הדרך</li>
-        </ul>
+    <!-- SUMMARY -->
+    <section id="close">
+      <div class="container">
+        <div class="card">
+          <div class="tag"><span class="ico"></span> סיכום</div>
+          <h2>המשקיע לא “מהמר” – הוא בוחר</h2>
+          <p style="text-align:center">
+            זהו פרויקט שמחבר בין: <b>נדל"ן חכם</b>, <b>תיירות חזקה</b>, <b>מודל השקעה הוגן</b> ו<b>חזון ארוך טווח</b>.
+            המשקיע לא “מהמר” – הוא בוחר בין <b>רווח</b> או <b>נכס</b>.
+          </p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- EXECUTION -->
-  <section id="execution">
-    <div class="container">
-      <div class="card">
-        <div class="tag"><span class="ico"></span> ניהול וביצוע</div>
-        <h2>איך זה מתבצע בפועל</h2>
-        <ul>
-          <li>החברה רשומה ופועלת בתאילנד</li>
-          <li>עבודה עם קבלנים מקומיים מנוסים</li>
-          <li>ליווי משפטי וניהולי</li>
-          <li>עדכונים שוטפים למשקיעים</li>
-          <li>אסטרטגיית יציאה מוגדרת מראש</li>
-        </ul>
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <div class="card">
+          <div class="tag"><span class="ico"></span> יצירת קשר</div>
+          <h2>לקבלת פרטים מלאים וזמינות יחידות</h2>
+          <p style="margin-bottom:14px;text-align:center">
+            השאירו פרטים ואחזור אליכם עם מידע מלא, זמינות יחידות והסבר אישי על מסלולי ההשקעה.
+          </p>
+
+          <!-- IMPORTANT: Replace YOUR_EMAIL_HERE -->
+          <form action="https://formsubmit.co/Y1001EֲGMAIL.COM" method="POST" style="display:grid;gap:10px;max-width:560px;margin:0 auto;">
+            <input type="hidden" name="_subject" value="ליד חדש – פרויקט וילות קוסמוי">
+            <input type="hidden" name="_captcha" value="false">
+
+            <input class="input" required name="name" placeholder="שם מלא" />
+            <input class="input" required name="phone" placeholder="טלפון" />
+            <input class="input" type="email" name="email" placeholder="אימייל (לא חובה)" />
+            <textarea class="input" name="message" rows="3" placeholder="מה מעניין אותך? (רווח / נכס / גם וגם)"></textarea>
+
+            <button class="submit" type="submit">שליחת פרטים</button>
+          </form>
+
+          <div class="note">
+            או כתבו ישירות ב-WhatsApp: <b>+972 50-270-1001</b>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- SUMMARY -->
-  <section id="close">
-    <div class="container">
-      <div class="card">
-        <div class="tag"><span class="ico"></span> סיכום</div>
-        <h2>נדל״ן חכם · תיירות חזקה · מודל הוגן</h2>
-        <p class="center">
-          זהו פרויקט שמחבר בין: <strong>נדל"ן חכם</strong>, <strong>תיירות חזקה</strong>, <strong>מודל השקעה הוגן</strong> ו<strong>חזון ארוך טווח</strong>.
-          המשקיע לא “מהמר” – הוא בוחר בין <strong>רווח</strong> או <strong>נכס</strong>.
-        </p>
-      </div>
-    </div>
-  </section>
+  <!-- WhatsApp floating -->
+  <a class="wa-float" href="https://wa.me/972502701001" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+      <path d="M20.52 3.48A11.78 11.78 0 0012.03 0C5.4 0 .03 5.37.03 12c0 2.1.55 4.16 1.6 5.98L0 24l6.18-1.62A11.95 11.95 0 0012.03 24C18.66 24 24 18.63 24 12a11.9 11.9 0 00-3.48-8.52z"/>
+    </svg>
+  </a>
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="container">
-      <div class="card">
-        <div class="tag"><span class="ico"></span> יצירת קשר</div>
-        <h2>לקבלת פרטים מלאים וזמינות יחידות</h2>
-        <p class="center">השאירו פרטים ואחזור אליכם עם מידע מלא והסבר אישי על מסלולי ההשקעה.</p>
-
-        <form class="form-wrap" action="https://formsubmit.co/Y1001E@GMAIL.COM" method="POST">
-          <input type="hidden" name="_subject" value="ליד חדש – פרויקט וילות קוסמוי">
-          <input type="hidden" name="_captcha" value="false">
-
-          <input class="input" required name="name" placeholder="שם מלא" />
-          <input class="input" required name="phone" placeholder="טלפון" />
-          <input class="input" type="email" name="email" placeholder="אימייל (לא חובה)" />
-          <textarea class="input" name="message" rows="3" placeholder="מה מעניין אותך? (רווח / נכס / גם וגם)"></textarea>
-
-          <button class="submit" type="submit">שליחת פרטים</button>
-        </form>
-
-        <div class="fineprint">או כתבו ישירות ב-WhatsApp: <strong>+972 50-270-1001</strong></div>
-      </div>
-    </div>
-  </section>
-</main>
-
-<a class="wa-float" href="https://wa.me/972502701001" target="_blank" rel="noopener" aria-label="WhatsApp">
-  <svg width="28" height="28" viewBox="0 0 24 24" fill="white" aria-hidden="true">
-    <path d="M20.52 3.48A11.78 11.78 0 0012.03 0C5.4 0 .03 5.37.03 12c0 2.1.55 4.16 1.6 5.98L0 24l6.18-1.62A11.95 11.95 0 0012.03 24C18.66 24 24 18.63 24 12a11.9 11.9 0 00-3.48-8.52z"/>
-  </svg>
-</a>
-
-<script>
-  // Smooth scroll
-  document.querySelectorAll('a[href^="#"]').forEach(a=>{
-    a.addEventListener("click",(e)=>{
-      const id = a.getAttribute("href");
-      const el = document.querySelector(id);
+  <script>
+    // Smooth scroll helper
+    function smoothTo(sel){
+      const el = document.querySelector(sel);
       if(!el) return;
-      e.preventDefault();
       el.scrollIntoView({behavior:"smooth", block:"start"});
+    }
+
+    // Buttons with data-scroll
+    document.querySelectorAll("[data-scroll]").forEach(btn=>{
+      btn.addEventListener("click", ()=> smoothTo(btn.getAttribute("data-scroll")));
     });
-  });
 
-  // Active tab highlight
-  const tabs = [...document.querySelectorAll(".tab")];
-  const sections = tabs.map(t => document.querySelector(t.getAttribute("href"))).filter(Boolean);
+    // Print to PDF
+    function printPDF(){ window.print(); }
+    document.getElementById("pdfBtn")?.addEventListener("click", printPDF);
+    document.getElementById("pdfBtn2")?.addEventListener("click", printPDF);
 
-  function setActive(id){
-    tabs.forEach(t => t.classList.toggle("active", t.getAttribute("href")==="#"+id));
-  }
+    // Mobile menu toggle (collapse/expand)
+    const toggle = document.getElementById("navToggle");
+    const drawer = document.getElementById("mobileDrawer");
 
-  const io = new IntersectionObserver((entries)=>{
-    const v = entries.filter(e=>e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];
-    if(v) setActive(v.target.id);
-  }, {threshold:[0.25,0.45,0.6]});
+    function setDrawer(open){
+      if(open){
+        drawer.classList.add("open");
+        toggle.setAttribute("aria-expanded","true");
+      }else{
+        drawer.classList.remove("open");
+        toggle.setAttribute("aria-expanded","false");
+      }
+    }
 
-  sections.forEach(s=>io.observe(s));
+    toggle?.addEventListener("click", ()=>{
+      const isOpen = drawer.classList.contains("open");
+      setDrawer(!isOpen);
+    });
 
-  // PDF (print)
-  document.getElementById("pdfBtn")?.addEventListener("click", ()=>window.print());
-</script>
+    // Close drawer when clicking a menu link (mobile)
+    drawer?.querySelectorAll("a[href^='#']").forEach(a=>{
+      a.addEventListener("click", (e)=>{
+        e.preventDefault();
+        const href = a.getAttribute("href");
+        setDrawer(false);
+        smoothTo(href);
+      });
+    });
+
+    // Desktop menu smooth scroll
+    document.querySelectorAll("nav.menu a[href^='#']").forEach(a=>{
+      a.addEventListener("click",(e)=>{
+        e.preventDefault();
+        smoothTo(a.getAttribute("href"));
+      });
+    });
+
+    // Active tab highlighting (desktop + mobile)
+    const desktopTabs = Array.from(document.querySelectorAll("nav.menu .tab"));
+    const mobileTabs  = Array.from(document.querySelectorAll("#mobileDrawer .tab"));
+    const sections = Array.from(document.querySelectorAll("main section[id]"));
+
+    function setActive(id){
+      desktopTabs.forEach(t => t.classList.toggle("active", t.getAttribute("href")==="#"+id));
+      mobileTabs.forEach(t => t.classList.toggle("active", t.getAttribute("href")==="#"+id));
+    }
+
+    const io = new IntersectionObserver((entries)=>{
+      const best = entries
+        .filter(e=>e.isIntersecting)
+        .sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];
+      if(best) setActive(best.target.id);
+    }, {threshold:[0.25,0.45,0.6]});
+
+    sections.forEach(s=>io.observe(s));
+
+    // Safety: close drawer on resize to desktop
+    window.addEventListener("resize", ()=>{
+      if(window.innerWidth >= 980) setDrawer(false);
+    });
+  </script>
 </body>
 </html>
