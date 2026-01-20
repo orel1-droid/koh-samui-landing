@@ -4,26 +4,30 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>תוכנית השקעה – 4 וילות עם בריכה | קוסמוי, תאילנד</title>
-  <meta name="description" content="דף נחיתה/מצגת יוקרתית לפרויקט 4 וילות יוקרה עם בריכה בקוסמוי, תאילנד. מודל השקעה שקוף: רווח ממכירה או קבלת וילה." />
+  <meta name="description" content="דף נחיתה יוקרתי בסגנון באלי לפרויקט 4 וילות יוקרה עם בריכה בקוסמוי, תאילנד. מודל השקעה: רווח ממכירה או קבלת וילה." />
 
   <style>
     :root{
-      --bg0:#070A10;
-      --bg1:#0B1220;
-      --card:#0E172A;
-      --card2:#0B1020;
-      --stroke:rgba(255,255,255,.10);
-      --muted:rgba(255,255,255,.70);
-      --text:rgba(255,255,255,.92);
+      /* Bali / Sand */
+      --bg:#FBF7F0;
+      --bg2:#F6EFE3;
+      --sand:#E9DDC9;
+      --sand2:#DCC8A6;
+      --ink:#1E1B16;
+      --muted: rgba(30,27,22,.70);
 
-      --a:#7C3AED; /* violet */
-      --b:#06B6D4; /* cyan */
-      --c:#22C55E; /* green */
+      --card: rgba(255,255,255,.78);
+      --stroke: rgba(30,27,22,.12);
+      --shadow: 0 18px 55px rgba(30,27,22,.10);
+      --shadow2: 0 10px 28px rgba(30,27,22,.09);
 
-      --shadow: 0 18px 60px rgba(0,0,0,.55);
-      --shadow2: 0 10px 30px rgba(0,0,0,.45);
-      --r:22px;
-      --r2:16px;
+      --accent:#B58B57;     /* coconut/tan */
+      --accent2:#CFAE7D;    /* beige-gold */
+      --leaf:#2E7D5B;       /* palm leaf */
+      --wa:#25D366;
+
+      --r:24px;
+      --r2:18px;
       --container: 1120px;
     }
 
@@ -31,129 +35,128 @@
     html,body{height:100%}
     body{
       margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
-      color:var(--text);
+      color:var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans";
       background:
-        radial-gradient(1200px 700px at 80% -10%, rgba(124,58,237,.45), transparent 60%),
-        radial-gradient(1000px 650px at 10% 10%, rgba(6,182,212,.38), transparent 55%),
-        radial-gradient(900px 600px at 50% 110%, rgba(34,197,94,.22), transparent 60%),
-        linear-gradient(180deg, var(--bg0), var(--bg1));
+        radial-gradient(900px 520px at 85% -10%, rgba(181,139,87,.18), transparent 60%),
+        radial-gradient(900px 520px at 15% 5%, rgba(46,125,91,.12), transparent 60%),
+        radial-gradient(850px 520px at 50% 110%, rgba(207,174,125,.22), transparent 60%),
+        linear-gradient(180deg, var(--bg), var(--bg2));
       overflow-x:hidden;
     }
-
     a{color:inherit; text-decoration:none}
-    .container{max-width:var(--container); margin:0 auto; padding:0 20px}
+    .container{max-width:var(--container); margin:0 auto; padding:0 18px}
 
-    /* Subtle grain */
-    .grain:before{
+    /* Palm / grain overlay (very subtle) */
+    .overlay:before{
       content:"";
       position:fixed; inset:0;
       pointer-events:none;
-      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.18'/%3E%3C/svg%3E");
-      mix-blend-mode:overlay;
-      opacity:.25;
+      opacity:.22;
+      background-image:
+        radial-gradient(circle at 20% 10%, rgba(181,139,87,.10) 0 2px, transparent 3px),
+        radial-gradient(circle at 80% 20%, rgba(46,125,91,.08) 0 2px, transparent 3px),
+        radial-gradient(circle at 40% 80%, rgba(207,174,125,.10) 0 2px, transparent 3px);
+      mix-blend-mode:multiply;
     }
 
     /* Header */
     header{
       position:sticky; top:0; z-index:50;
-      backdrop-filter: blur(14px);
-      background: rgba(7,10,16,.55);
-      border-bottom: 1px solid var(--stroke);
+      background: rgba(251,247,240,.78);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(30,27,22,.10);
     }
     .nav{
-      height:68px;
+      height:72px;
       display:flex; align-items:center; justify-content:space-between;
-      gap:14px;
+      gap:12px;
     }
-    .brand{
-      display:flex; align-items:center; gap:12px; min-width: 220px;
-    }
+    .brand{display:flex; align-items:center; gap:12px; min-width: 240px;}
     .logo{
-      width:38px; height:38px; border-radius:14px;
-      background: conic-gradient(from 210deg, var(--a), var(--b), var(--c), var(--a));
-      box-shadow: 0 0 0 1px rgba(255,255,255,.16) inset, var(--shadow2);
+      width:40px; height:40px; border-radius:16px;
+      background:
+        radial-gradient(16px 16px at 30% 25%, rgba(255,255,255,.9), transparent 60%),
+        linear-gradient(135deg, rgba(181,139,87,.92), rgba(207,174,125,.75));
+      box-shadow: 0 0 0 1px rgba(30,27,22,.10) inset, var(--shadow2);
     }
-    .brand h1{
-      margin:0;
-      font-size:14px;
-      letter-spacing:.2px;
-      line-height:1.1;
-      font-weight:700;
-    }
-    .brand .sub{
-      font-size:12px;
-      color:var(--muted);
-      font-weight:600;
-      margin-top:2px;
-    }
+    .brand h1{margin:0; font-size:14px; font-weight:900; letter-spacing:.2px}
+    .brand .sub{margin-top:2px; font-size:12px; color:var(--muted); font-weight:700}
 
-    .navlinks{
-      display:flex; gap:10px; flex-wrap:wrap; justify-content:center;
+    /* Modern menu */
+    .menu{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
       align-items:center;
+      justify-content:center;
+      padding:8px;
+      border:1px solid rgba(30,27,22,.10);
+      background: rgba(255,255,255,.60);
+      border-radius: 999px;
+      box-shadow: var(--shadow2);
     }
-    .chip{
-      padding:9px 12px;
-      border:1px solid var(--stroke);
-      border-radius:999px;
-      background: rgba(14,23,42,.55);
-      color: rgba(255,255,255,.86);
+    .tab{
+      padding:10px 12px;
+      border-radius: 999px;
       font-size:12px;
-      font-weight:650;
-      transition: transform .15s ease, background .15s ease, border-color .15s ease;
+      font-weight:900;
+      color: rgba(30,27,22,.78);
+      border: 1px solid transparent;
+      transition: background .15s ease, transform .15s ease, border-color .15s ease;
       user-select:none;
+      white-space:nowrap;
     }
-    .chip:hover{transform: translateY(-1px); background: rgba(14,23,42,.8); border-color: rgba(255,255,255,.20)}
-    .chip.active{
-      background: linear-gradient(135deg, rgba(124,58,237,.25), rgba(6,182,212,.20));
-      border-color: rgba(124,58,237,.45);
+    .tab:hover{background: rgba(233,221,201,.55); transform: translateY(-1px)}
+    .tab.active{
+      background: linear-gradient(135deg, rgba(181,139,87,.18), rgba(207,174,125,.22));
+      border-color: rgba(181,139,87,.28);
+      color: rgba(30,27,22,.92);
     }
 
-    .actions{
-      display:flex; gap:10px; align-items:center; min-width:220px; justify-content:flex-end;
-    }
+    .actions{display:flex; align-items:center; gap:10px; min-width:240px; justify-content:flex-end;}
     .btn{
       display:inline-flex; align-items:center; justify-content:center; gap:10px;
       padding:10px 14px;
       border-radius:999px;
-      border:1px solid var(--stroke);
-      background: rgba(14,23,42,.55);
-      font-weight:750; font-size:12.5px;
+      border:1px solid rgba(30,27,22,.12);
+      background: rgba(255,255,255,.70);
+      font-weight:950; font-size:12.5px;
       cursor:pointer;
       transition: transform .15s ease, background .15s ease, border-color .15s ease;
-      white-space:nowrap;
     }
-    .btn:hover{transform: translateY(-1px); background: rgba(14,23,42,.85); border-color: rgba(255,255,255,.22)}
+    .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.92); border-color: rgba(30,27,22,.18)}
     .btn.primary{
-      border-color: rgba(6,182,212,.55);
-      background: linear-gradient(135deg, rgba(6,182,212,.22), rgba(124,58,237,.18));
+      border-color: rgba(181,139,87,.35);
+      background: linear-gradient(135deg, rgba(181,139,87,.22), rgba(207,174,125,.30));
     }
 
-    /* Sections */
-    main{padding: 26px 0 90px}
-    section{
-      scroll-margin-top: 92px;
-      margin: 18px 0 26px;
-    }
+    main{padding: 24px 0 96px}
+    section{scroll-margin-top: 92px; margin: 18px 0 26px}
 
+    /* HERO */
     .hero{
-      border: 1px solid var(--stroke);
-      background: linear-gradient(180deg, rgba(14,23,42,.72), rgba(11,16,32,.68));
-      border-radius: calc(var(--r) + 8px);
+      border:1px solid rgba(30,27,22,.10);
+      background:
+        radial-gradient(900px 320px at 80% 0%, rgba(207,174,125,.22), transparent 65%),
+        radial-gradient(760px 300px at 10% 10%, rgba(46,125,91,.12), transparent 70%),
+        linear-gradient(180deg, rgba(255,255,255,.76), rgba(255,255,255,.64));
+      border-radius: calc(var(--r) + 10px);
       box-shadow: var(--shadow);
       overflow:hidden;
       position:relative;
     }
-    .hero::after{
+
+    /* Decorative waves + palm */
+    .hero:before{
       content:"";
-      position:absolute; inset:-2px;
+      position:absolute; inset:0;
       background:
-        radial-gradient(600px 220px at 80% 0%, rgba(6,182,212,.30), transparent 70%),
-        radial-gradient(700px 260px at 15% 10%, rgba(124,58,237,.28), transparent 75%),
-        radial-gradient(520px 240px at 50% 110%, rgba(34,197,94,.18), transparent 75%);
+        radial-gradient(700px 240px at 50% 110%, rgba(233,221,201,.75), transparent 65%),
+        radial-gradient(520px 220px at 20% 120%, rgba(207,174,125,.45), transparent 60%);
+      opacity:.9;
       pointer-events:none;
     }
-
     .hero-inner{
       position:relative; z-index:2;
       padding: 34px 28px;
@@ -163,40 +166,46 @@
       align-items:stretch;
     }
     @media (max-width: 920px){
-      .hero-inner{grid-template-columns: 1fr; padding: 28px 18px}
+      .hero-inner{grid-template-columns: 1fr; padding: 26px 16px}
       .actions{min-width:auto}
       .brand{min-width:auto}
-      .btn.secondaryhide{display:none}
     }
 
     .eyebrow{
       display:inline-flex; align-items:center; gap:10px;
-      padding: 8px 12px;
+      padding: 9px 12px;
       border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.14);
-      background: rgba(0,0,0,.18);
-      color: rgba(255,255,255,.84);
-      font-weight:800;
+      border: 1px solid rgba(30,27,22,.10);
+      background: rgba(255,255,255,.75);
+      color: rgba(30,27,22,.78);
+      font-weight:950;
       font-size: 12px;
       width: fit-content;
     }
     .dot{
       width:10px; height:10px; border-radius:999px;
-      background: linear-gradient(135deg, var(--b), var(--a));
-      box-shadow: 0 0 0 4px rgba(6,182,212,.14);
+      background: linear-gradient(135deg, var(--leaf), var(--accent));
+      box-shadow: 0 0 0 4px rgba(46,125,91,.10);
     }
+
+    /* BIGGER headings */
     .hero h2{
       margin: 14px 0 10px;
-      font-size: 36px;
-      line-height: 1.12;
-      letter-spacing: -.4px;
+      font-size: 44px;
+      line-height: 1.08;
+      letter-spacing: -.6px;
+      font-weight: 1000;
+    }
+    @media (max-width: 520px){
+      .hero h2{font-size: 34px}
     }
     .hero p{
       margin: 0 0 16px;
       color: var(--muted);
-      font-size: 15.5px;
-      line-height: 1.75;
-      max-width: 62ch;
+      font-size: 16.5px;
+      line-height: 1.85;
+      max-width: 64ch;
+      font-weight: 650;
     }
 
     .metrics{
@@ -207,135 +216,133 @@
     }
     @media (max-width: 520px){
       .metrics{grid-template-columns: 1fr}
-      .hero h2{font-size: 30px}
     }
     .metric{
-      border: 1px solid rgba(255,255,255,.10);
-      background: rgba(0,0,0,.15);
+      border: 1px solid rgba(30,27,22,.10);
+      background: rgba(255,255,255,.72);
       border-radius: 18px;
       padding: 14px 14px 12px;
+      box-shadow: var(--shadow2);
     }
-    .metric .k{font-size: 12px; color: rgba(255,255,255,.68); font-weight:700}
-    .metric .v{font-size: 18px; font-weight:900; margin-top: 6px}
-    .metric .t{font-size: 12px; color: rgba(255,255,255,.68); margin-top: 6px}
+    .metric .k{font-size: 12px; color: rgba(30,27,22,.60); font-weight:900}
+    .metric .v{font-size: 20px; font-weight:1000; margin-top: 6px}
+    .metric .t{font-size: 12px; color: rgba(30,27,22,.58); margin-top: 6px; font-weight:800}
 
     /* Side card */
     .side{
-      border:1px solid rgba(255,255,255,.10);
-      border-radius: calc(var(--r) + 4px);
+      border:1px solid rgba(30,27,22,.10);
+      border-radius: calc(var(--r) + 6px);
       background:
-        radial-gradient(260px 220px at 30% 0%, rgba(124,58,237,.25), transparent 60%),
-        linear-gradient(180deg, rgba(14,23,42,.70), rgba(11,16,32,.65));
+        radial-gradient(300px 220px at 30% 0%, rgba(46,125,91,.10), transparent 60%),
+        linear-gradient(180deg, rgba(255,255,255,.78), rgba(255,255,255,.66));
       padding: 18px;
       display:flex; flex-direction:column; gap:12px;
       box-shadow: var(--shadow2);
     }
-    .side h3{margin:0; font-size:14px; letter-spacing:.2px}
+    .side h3{margin:0; font-size:18px; font-weight:1000; letter-spacing:-.2px}
     .side .mini{
       margin:0;
       color: var(--muted);
-      font-size: 12.5px;
-      line-height: 1.7;
+      font-size: 13.5px;
+      line-height: 1.85;
+      font-weight: 750;
     }
-
     .pillrow{display:flex; flex-wrap:wrap; gap:8px}
     .pill{
       font-size: 12px;
-      font-weight: 800;
+      font-weight: 1000;
       padding: 8px 10px;
       border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(0,0,0,.16);
-      color: rgba(255,255,255,.86);
+      border: 1px solid rgba(30,27,22,.10);
+      background: rgba(233,221,201,.45);
+      color: rgba(30,27,22,.86);
     }
 
-    /* Cards grid */
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 14px;
-    }
+    /* Cards */
+    .grid{display:grid; grid-template-columns: repeat(12, 1fr); gap: 14px}
     .card{
       grid-column: span 6;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(14,23,42,.62);
+      border:1px solid rgba(30,27,22,.10);
+      background: rgba(255,255,255,.72);
       border-radius: var(--r);
-      padding: 18px 18px 16px;
+      padding: 20px 18px 18px;
       box-shadow: var(--shadow2);
       position:relative;
       overflow:hidden;
     }
-    .card::after{
-      content:"";
-      position:absolute; inset:-2px;
-      background:
-        radial-gradient(320px 180px at 85% 0%, rgba(6,182,212,.16), transparent 70%),
-        radial-gradient(320px 180px at 15% 10%, rgba(124,58,237,.14), transparent 72%);
-      pointer-events:none;
-    }
-    .card > *{position:relative; z-index:2}
-    .card h3{
-      margin:0 0 10px;
-      font-size: 15px;
-      letter-spacing: .2px;
-    }
-    .card p, .card li{color: var(--muted)}
-    .card ul{margin: 0; padding: 0 18px 0 0; line-height: 1.85}
     .card.full{grid-column: span 12}
     .card.third{grid-column: span 4}
     @media (max-width: 920px){
       .card, .card.third{grid-column: span 12}
     }
 
+    /* BIGGER section titles */
+    .card h3{
+      margin: 0 0 10px;
+      font-size: 20px;
+      font-weight: 1000;
+      letter-spacing: -.3px;
+    }
+    .card p, .card li{
+      color: var(--muted);
+      font-weight: 750;
+      font-size: 15px;
+      line-height: 1.9;
+    }
+    .card ul{margin: 0; padding: 0 18px 0 0}
+
     .tag{
       display:inline-flex; align-items:center; gap:8px;
-      font-size: 11.5px; font-weight: 900;
-      padding: 7px 10px;
+      font-size: 12px; font-weight: 1000;
+      padding: 8px 10px;
       border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(0,0,0,.14);
-      margin-bottom: 10px;
-      color: rgba(255,255,255,.86);
+      border: 1px solid rgba(30,27,22,.10);
+      background: rgba(233,221,201,.50);
+      margin-bottom: 12px;
+      color: rgba(30,27,22,.90);
     }
     .tag .ico{
       width: 9px; height: 9px; border-radius: 99px;
-      background: linear-gradient(135deg, var(--b), var(--a));
-      box-shadow: 0 0 0 4px rgba(6,182,212,.12);
+      background: linear-gradient(135deg, var(--leaf), var(--accent));
+      box-shadow: 0 0 0 4px rgba(46,125,91,.10);
     }
 
-    /* Investment visual */
+    /* Investment visual – fixed direction for RTL (right -> left) */
     .flow{
       display:grid;
       grid-template-columns: 1fr auto 1fr;
       gap: 12px;
       align-items:stretch;
       margin-top: 10px;
+      direction: rtl; /* ensures conceptual order in RTL */
     }
     @media (max-width: 720px){
       .flow{grid-template-columns: 1fr; gap: 10px}
       .arrow{display:none}
     }
     .panel{
-      border: 1px solid rgba(255,255,255,.10);
-      background: rgba(0,0,0,.16);
+      border: 1px solid rgba(30,27,22,.10);
+      background: rgba(255,255,255,.72);
       border-radius: var(--r2);
       padding: 14px;
       height:100%;
+      box-shadow: var(--shadow2);
     }
-    .panel h4{margin:0 0 6px; font-size:13px}
+    .panel h4{margin:0 0 6px; font-size:14px; font-weight:1000}
     .panel .big{
-      font-weight: 950;
-      font-size: 22px;
-      letter-spacing: .2px;
+      font-weight: 1100;
+      font-size: 26px;
+      letter-spacing: -.3px;
       margin: 8px 0 6px;
     }
-    .panel .subtxt{font-size: 12.5px; color: var(--muted); line-height: 1.7; margin:0}
+    .panel .subtxt{font-size: 13.5px; color: var(--muted); line-height: 1.8; margin:0; font-weight: 800}
 
+    /* Arrow points RIGHT->LEFT (correct for RTL flow) */
     .arrow{
-      width: 44px;
-      border-radius: 18px;
-      border: 1px solid rgba(255,255,255,.10);
-      background: linear-gradient(180deg, rgba(6,182,212,.16), rgba(124,58,237,.12));
+      width: 48px;
+      border-radius: 20px;
+      border: 1px solid rgba(30,27,22,.10);
+      background: linear-gradient(180deg, rgba(233,221,201,.62), rgba(255,255,255,.75));
       display:flex; align-items:center; justify-content:center;
       box-shadow: var(--shadow2);
     }
@@ -344,87 +351,86 @@
     /* Contact form */
     .input{
       width:100%;
-      padding:14px 14px;
-      border-radius:14px;
-      border:1px solid rgba(255,255,255,.12);
-      background: rgba(11,16,32,.70);
-      color: rgba(255,255,255,.92);
+      padding:15px 14px;
+      border-radius:16px;
+      border:1px solid rgba(30,27,22,.12);
+      background: rgba(255,255,255,.82);
+      color: rgba(30,27,22,.90);
       outline:none;
-      font-size: 14px;
-      transition: border-color .15s ease, transform .15s ease;
+      font-size: 14.5px;
+      font-weight: 800;
+      transition: border-color .15s ease, transform .15s ease, box-shadow .15s ease;
     }
     .input:focus{
-      border-color: rgba(6,182,212,.55);
+      border-color: rgba(181,139,87,.45);
       transform: translateY(-1px);
+      box-shadow: 0 12px 26px rgba(181,139,87,.14);
     }
     .submit{
       margin-top:6px;
-      padding:14px 16px;
+      padding:14px 18px;
       border-radius:999px;
       border:none;
-      font-weight:900;
-      background: linear-gradient(135deg, rgba(6,182,212,.95), rgba(124,58,237,.92));
-      color:white;
+      font-weight:1100;
+      background: linear-gradient(135deg, rgba(181,139,87,.92), rgba(207,174,125,.90));
+      color: rgba(30,27,22,.96);
       cursor:pointer;
       transition: transform .15s ease, filter .15s ease;
       width: fit-content;
-      min-width: 180px;
+      min-width: 200px;
+      box-shadow: var(--shadow2);
     }
-    .submit:hover{transform: translateY(-1px); filter: brightness(1.05)}
+    .submit:hover{transform: translateY(-1px); filter: brightness(1.03)}
     .note{
       margin-top:12px;
-      color: rgba(255,255,255,.70);
-      font-size: 13px;
-      line-height: 1.8;
+      color: rgba(30,27,22,.70);
+      font-size: 13.5px;
+      line-height: 1.9;
+      font-weight: 800;
     }
 
-    /* Slide Mode */
+    /* Slide mode */
     .slidemode main{padding-top: 12px}
     .slidemode section{margin:0; padding:0}
-    .slidemode .slide{min-height: calc(100vh - 68px); display:flex; align-items:center}
+    .slidemode .slide{min-height: calc(100vh - 72px); display:flex; align-items:center}
     .slidemode .slide > .container{width:100%}
-    .slidemode .hero{border-radius: 28px}
 
     /* Print */
     @media print{
       header{position:static}
-      .actions, .navlinks{display:none}
+      .actions, .menu{display:none}
       body{background:white; color:#111}
-      .grain:before{display:none}
-      .hero, .card, .side, .metric, .panel{
-        box-shadow:none !important;
-        background: #fff !important;
-        border-color: #ddd !important;
-        color:#111 !important;
-      }
-      .card p, .card li, .side .mini, .hero p, .metric .k, .metric .t, .panel .subtxt, .note{color:#333 !important}
-      .tag{background:#f3f3f3 !important; border-color:#ddd !important; color:#111 !important}
-      .hero::after, .card::after{display:none}
-      a{color:#111}
+      .overlay:before{display:none}
+      .hero,.card,.side,.metric,.panel{box-shadow:none !important; background:#fff !important}
     }
 
-    /* WhatsApp floating button */
+    /* WhatsApp button */
     .wa-float{
       position:fixed;
       bottom:22px;
       left:22px;
       z-index:999;
-      width:58px;
-      height:58px;
+      width:60px;
+      height:60px;
       border-radius:50%;
-      background:#25D366;
+      background: var(--wa);
       display:flex;
       align-items:center;
       justify-content:center;
-      box-shadow:0 10px 30px rgba(0,0,0,.35);
+      box-shadow:0 12px 32px rgba(0,0,0,.18);
       transition: transform .15s ease, filter .15s ease;
     }
     .wa-float:hover{transform: translateY(-1px); filter: brightness(1.02)}
     .wa-float svg{display:block}
+
+    /* Small CTA inside header for mobile */
+    @media (max-width: 520px){
+      .btn.primary{display:none}
+    }
   </style>
 </head>
 
-<body class="grain">
+<body class="overlay">
   <header>
     <div class="container">
       <div class="nav">
@@ -432,43 +438,39 @@
           <div class="logo" aria-hidden="true"></div>
           <div>
             <h1>פרויקט 4 וילות עם בריכה</h1>
-            <div class="sub">קוסמוי, תאילנד · תוכנית השקעה שקופה</div>
+            <div class="sub">קוסמוי, תאילנד · סגנון באלי · השקעה שקופה</div>
           </div>
         </div>
 
-        <nav class="navlinks" aria-label="ניווט">
-          <a class="chip" href="#hero">שער</a>
-          <a class="chip" href="#summary">תקציר</a>
-          <a class="chip" href="#details">נתונים</a>
-          <a class="chip" href="#structure">מבנה</a>
-          <a class="chip" href="#exit">מסלולים</a>
-          <a class="chip" href="#kohsamui">קוסמוי</a>
-          <a class="chip" href="#benefits">יתרונות</a>
-          <a class="chip" href="#execution">ביצוע</a>
-          <a class="chip" href="#contact">יצירת קשר</a>
+        <nav class="menu" aria-label="ניווט">
+          <a class="tab" href="#hero">שער</a>
+          <a class="tab" href="#summary">תקציר</a>
+          <a class="tab" href="#details">נתונים</a>
+          <a class="tab" href="#structure">מבנה</a>
+          <a class="tab" href="#exit">מסלולים</a>
+          <a class="tab" href="#kohsamui">קוסמוי</a>
+          <a class="tab" href="#benefits">יתרונות</a>
+          <a class="tab" href="#execution">ביצוע</a>
+          <a class="tab" href="#contact">יצירת קשר</a>
         </nav>
 
         <div class="actions">
-          <button class="btn secondaryhide" id="modeBtn" type="button" title="מצב מצגת">
-            מצב מצגת
-          </button>
-          <button class="btn primary" id="pdfBtn" type="button" title="הדפסה / PDF">
-            PDF
-          </button>
+          <button class="btn" id="modeBtn" type="button" title="מצב מצגת">מצב מצגת</button>
+          <button class="btn primary" id="pdfBtn" type="button" title="PDF">PDF</button>
         </div>
       </div>
     </div>
   </header>
 
   <main>
-    <!-- Slide 1 / Hero -->
+    <!-- HERO -->
     <section id="hero" class="slide">
       <div class="container">
         <div class="hero">
           <div class="hero-inner">
             <div>
-              <div class="eyebrow"><span class="dot"></span> תוכנית השקעה · קוסמוי, תאילנד</div>
-              <h2>פרויקט 4 וילות פרטיות עם בריכה<br/>מודל השקעה ברור: רווח או נכס</h2>
+              <div class="eyebrow"><span class="dot"></span> השקעה יוקרתית באי · חלום טרופי</div>
+              <h2>4 וילות פרטיות עם בריכה בקוסמוי<br/>מודל השקעה: רווח או נכס</h2>
               <p>
                 הפרויקט כולל בניית 4 וילות פרטיות עם בריכה, באי קוסמוי – אחד מיעדי הנדל"ן החזקים בדרום־מזרח אסיה.
                 המודל מאפשר למשקיע להרוויח ממכירת הווילה או לקבל וילה לעצמו במחיר נמוך משמעותית ממחיר שוק.
@@ -495,7 +497,7 @@
             </div>
 
             <aside class="side" aria-label="תמצית מהירה">
-              <h3>בחירה בין שני מסלולים</h3>
+              <h3>חוויה, נכס, והזדמנות</h3>
               <p class="mini">
                 מסלול A: רווח ממכירה עם קדימות מלאה להחזר הקרן וחלוקת רווח הוגנת.
                 מסלול B: קבלת וילה לעצמך מתחת למחיר שוק, עם פוטנציאל השכרה ועליית ערך.
@@ -504,7 +506,7 @@
                 <span class="pill">קדימות להחזר קרן</span>
                 <span class="pill">שקיפות מלאה</span>
                 <span class="pill">אופציה לנכס פיזי</span>
-                <span class="pill">פוטנציאל השכרה</span>
+                <span class="pill">אווירת אי</span>
               </div>
               <div class="panel" style="margin-top:auto;">
                 <h4>משך פרויקט</h4>
@@ -516,12 +518,13 @@
       </div>
     </section>
 
-    <!-- Slide 2 -->
+    <!-- Summary -->
     <section id="summary" class="slide">
       <div class="container">
         <div class="grid">
           <div class="card full">
             <div class="tag"><span class="ico"></span> תקציר מנהלים</div>
+            <h3>מהות ההזדמנות</h3>
             <ul>
               <li>בניית 4 וילות פרטיות עם בריכה בקוסמוי – יעד נדל"ן חזק בדרום־מזרח אסיה.</li>
               <li>המשקיע בוחר: רווח ממכירת הווילה או קבלת וילה במחיר נמוך ממחיר שוק.</li>
@@ -532,12 +535,13 @@
       </div>
     </section>
 
-    <!-- Slide 3 -->
+    <!-- Details -->
     <section id="details" class="slide">
       <div class="container">
         <div class="grid">
           <div class="card">
             <div class="tag"><span class="ico"></span> נתוני הפרויקט</div>
+            <h3>פרטי הפרויקט</h3>
             <ul>
               <li><b>מיקום:</b> קוסמוי, תאילנד</li>
               <li><b>סוג נכס:</b> וילות יוקרה עם בריכה פרטית</li>
@@ -547,6 +551,7 @@
 
           <div class="card">
             <div class="tag"><span class="ico"></span> קהל יעד</div>
+            <h3>למי זה מתאים</h3>
             <ul>
               <li>משקיעים זרים</li>
               <li>רוכשי וילות לנופש / מגורים</li>
@@ -557,13 +562,15 @@
       </div>
     </section>
 
-    <!-- Slide 4 -->
+    <!-- Structure -->
     <section id="structure" class="slide">
       <div class="container">
         <div class="grid">
           <div class="card full">
             <div class="tag"><span class="ico"></span> מבנה ההשקעה</div>
+            <h3>מספרים ברורים מראש</h3>
 
+            <!-- Order in RTL: Right panel -> Arrow -> Left panel -->
             <div class="flow" aria-label="ויזואל מבנה השקעה">
               <div class="panel">
                 <h4>השקעה לווילה</h4>
@@ -572,9 +579,10 @@
               </div>
 
               <div class="arrow" aria-hidden="true">
+                <!-- Right-to-left arrow -->
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                  <path d="M6 12h12" stroke="rgba(255,255,255,.85)" stroke-width="2" stroke-linecap="round"/>
-                  <path d="M13 7l5 5-5 5" stroke="rgba(255,255,255,.85)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M18 12H6" stroke="rgba(30,27,22,.85)" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M11 7l-5 5 5 5" stroke="rgba(30,27,22,.85)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </div>
 
@@ -595,14 +603,16 @@
       </div>
     </section>
 
-    <!-- Slide 5 -->
+    <!-- Exit -->
     <section id="exit" class="slide">
       <div class="container">
         <div class="grid">
           <div class="card full">
             <div class="tag"><span class="ico"></span> מסלולי יציאה למשקיע</div>
-            <div class="grid" style="gap:14px; margin-top:6px;">
-              <div class="card" style="grid-column: span 6; background: rgba(14,23,42,.55);">
+            <h3>שני מסלולים – בחירה אחת נכונה עבורך</h3>
+
+            <div class="grid" style="gap:14px; margin-top:10px;">
+              <div class="card" style="grid-column: span 6; background: rgba(255,255,255,.74);">
                 <h3>🟢 מסלול A – רווח ממכירה</h3>
                 <ul>
                   <li>המשקיע משקיע: 550,000 ₪</li>
@@ -612,7 +622,7 @@
                 </ul>
               </div>
 
-              <div class="card" style="grid-column: span 6; background: rgba(14,23,42,.55);">
+              <div class="card" style="grid-column: span 6; background: rgba(255,255,255,.74);">
                 <h3>🟢 מסלול B – קבלת וילה לעצמך</h3>
                 <ul>
                   <li>המשקיע בוחר לא למכור</li>
@@ -626,6 +636,7 @@
 
           <div class="card">
             <div class="tag"><span class="ico"></span> דוגמה מספרית (מסלול A)</div>
+            <h3>איך זה נראה במספרים</h3>
             <ul>
               <li>מכירה ב־1,100,000 ₪</li>
               <li>רווח לאחר החזר קרן: 550,000 ₪</li>
@@ -635,7 +646,8 @@
           </div>
 
           <div class="card">
-            <div class="tag"><span class="ico"></span> יתרון מסלול B</div>
+            <div class="tag"><span class="ico"></span> משמעות מסלול B</div>
+            <h3>נכס חלומי מתחת למחיר שוק</h3>
             <ul>
               <li>רכישת וילה מתחת למחיר שוק</li>
               <li>פוטנציאל השכרה / עליית ערך עתידית</li>
@@ -646,49 +658,34 @@
       </div>
     </section>
 
-    <!-- Slide 6 -->
+    <!-- Why Koh Samui -->
     <section id="kohsamui" class="slide">
       <div class="container">
         <div class="grid">
           <div class="card full">
             <div class="tag"><span class="ico"></span> למה קוסמוי?</div>
+            <h3>ביקוש, תיירות והיצע מוגבל</h3>
+
             <div class="grid">
-              <div class="card third">
-                <h3>תיירות חזקה</h3>
-                <p>מיליוני תיירים בשנה.</p>
-              </div>
-              <div class="card third">
-                <h3>ביקוש לוילות יוקרה</h3>
-                <p>ביקוש קבוע לווילות יוקרה.</p>
-              </div>
-              <div class="card third">
-                <h3>היצע קרקע מוגבל</h3>
-                <p>היצע קרקע מוגבל → עליית מחירים.</p>
-              </div>
-              <div class="card third">
-                <h3>הגירה חיובית</h3>
-                <p>נוודים דיגיטליים ומשקיעים.</p>
-              </div>
-              <div class="card third">
-                <h3>שוק השכרות חזק</h3>
-                <p>קצרות וארוכות טווח.</p>
-              </div>
-              <div class="card third">
-                <h3>לוקיישן מבוקש</h3>
-                <p>אחד האזורים המבוקשים בתאילנד.</p>
-              </div>
+              <div class="card third"><h3>מיליוני תיירים</h3><p>תנועה חזקה לאורך השנה.</p></div>
+              <div class="card third"><h3>וילות יוקרה</h3><p>ביקוש קבוע למוצרים איכותיים.</p></div>
+              <div class="card third"><h3>קרקע מוגבלת</h3><p>היצע מוגבל → עליית מחירים.</p></div>
+              <div class="card third"><h3>נוודים דיגיטליים</h3><p>הגירה חיובית ומשקיעים.</p></div>
+              <div class="card third"><h3>שוק השכרות</h3><p>קצרות וארוכות טווח.</p></div>
+              <div class="card third"><h3>אי מבוקש</h3><p>לוקיישן שמוכר חלום.</p></div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Slide 7 -->
+    <!-- Benefits -->
     <section id="benefits" class="slide">
       <div class="container">
         <div class="grid">
           <div class="card full">
             <div class="tag"><span class="ico"></span> יתרונות למשקיע</div>
+            <h3>למה זה עובד</h3>
             <ul>
               <li>✔ סכום כניסה ברור וידוע מראש</li>
               <li>✔ מודל פשוט – בלי אותיות קטנות</li>
@@ -702,12 +699,13 @@
       </div>
     </section>
 
-    <!-- Slide 8 -->
+    <!-- Execution -->
     <section id="execution" class="slide">
       <div class="container">
         <div class="grid">
           <div class="card full">
             <div class="tag"><span class="ico"></span> ניהול וביצוע</div>
+            <h3>הכול מנוהל ומלווה</h3>
             <ul>
               <li>החברה רשומה ופועלת בתאילנד</li>
               <li>עבודה עם קבלנים מקומיים מנוסים</li>
@@ -726,13 +724,12 @@
         <div class="grid">
           <div class="card full">
             <div class="tag"><span class="ico"></span> יצירת קשר</div>
-
-            <h3 style="margin-top:6px">רוצים פרטים מלאים וזמינות יחידות?</h3>
-            <p style="color:var(--muted); max-width:65ch; line-height:1.85; margin-top:6px">
+            <h3>רוצים לקבל פרטים מלאים וזמינות יחידות?</h3>
+            <p style="color:var(--muted); max-width:70ch; line-height:1.9; margin-top:6px; font-weight:800">
               השאירו פרטים ואחזור אליכם עם מידע מלא, זמינות יחידות והסבר אישי על מסלולי ההשקעה.
             </p>
 
-            <form action="https://formsubmit.co/Y1001e@gmail.com" method="POST"
+            <form action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST"
                   style="margin-top:18px; display:grid; gap:12px; max-width:560px">
               <input type="hidden" name="_subject" value="ליד חדש – פרויקט וילות קוסמוי">
               <input type="hidden" name="_captcha" value="false">
@@ -763,12 +760,12 @@
   </a>
 
   <script>
-    // Active nav chip + smooth behavior
-    const chips = [...document.querySelectorAll(".chip")];
-    const sections = chips.map(a => document.querySelector(a.getAttribute("href"))).filter(Boolean);
+    // Active nav tab + smooth scroll
+    const tabs = [...document.querySelectorAll(".tab")];
+    const sections = tabs.map(a => document.querySelector(a.getAttribute("href"))).filter(Boolean);
 
     const setActive = (id) => {
-      chips.forEach(c => c.classList.toggle("active", c.getAttribute("href") === "#" + id));
+      tabs.forEach(t => t.classList.toggle("active", t.getAttribute("href") === "#" + id));
     };
 
     const io = new IntersectionObserver((entries) => {
@@ -779,26 +776,23 @@
 
     sections.forEach(s => io.observe(s));
 
-    // Slide mode
-    const modeBtn = document.getElementById("modeBtn");
-    const pdfBtn  = document.getElementById("pdfBtn");
-    const body = document.body;
-
-    const toggleSlideMode = () => {
-      body.classList.toggle("slidemode");
-      const active = document.querySelector(".chip.active");
-      if (active) document.querySelector(active.getAttribute("href")).scrollIntoView({behavior:"smooth", block:"center"});
-    };
-
-    modeBtn.addEventListener("click", toggleSlideMode);
-    pdfBtn.addEventListener("click", () => window.print());
-
-    // Smooth scroll for nav
-    chips.forEach(a => a.addEventListener("click", (e) => {
+    tabs.forEach(a => a.addEventListener("click", (e) => {
       e.preventDefault();
       const target = document.querySelector(a.getAttribute("href"));
       target?.scrollIntoView({behavior:"smooth", block:"start"});
     }));
+
+    // Slide mode + Print
+    const modeBtn = document.getElementById("modeBtn");
+    const pdfBtn  = document.getElementById("pdfBtn");
+    const body = document.body;
+
+    modeBtn.addEventListener("click", () => {
+      body.classList.toggle("slidemode");
+      const active = document.querySelector(".tab.active");
+      if (active) document.querySelector(active.getAttribute("href")).scrollIntoView({behavior:"smooth", block:"center"});
+    });
+    pdfBtn.addEventListener("click", () => window.print());
   </script>
 </body>
 </html>
